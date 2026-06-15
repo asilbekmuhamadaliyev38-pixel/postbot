@@ -4,8 +4,9 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, ContextTypes
 
-TELEGRAM_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"  # @BotFather dan
-IMGBB_API_KEY = "YOUR_IMGBB_API_KEY"        # api.imgbb.com dan
+import os
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+IMGBB_API_KEY = os.getenv("IMGBB_API_KEY")
 
 
 # Render uchun health check
